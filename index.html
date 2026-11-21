@@ -30,7 +30,17 @@
 <section class="view hidden" id="shopView"><h1 class="text-2xl font-black">Магазин наград</h1><p class="text-sm muted mb-4">Покупай помощь для своего пути</p><div class="card rounded-2xl p-4 mb-4 font-black">💎 <span id="shopCoins">0</span> монет</div><h2 class="font-black mb-2">Расходники</h2><div id="consumables" class="grid grid-cols-2 gap-3"></div><h2 class="font-black mt-5 mb-2">Темы оформления</h2><div id="themes" class="grid grid-cols-2 gap-3"></div></section>
 <section class="view hidden" id="settingsView"><h1 class="text-2xl font-black">Настройки</h1><p class="text-sm muted mb-4">Персональные данные, сферы и цель</p>
 <div class="card rounded-2xl p-4 space-y-3"><h2 class="font-black">О тебе</h2><label class="block text-xs font-black muted">ИМЯ / ПСЕВДОНИМ<input id="playerName" class="field mt-1" placeholder="Как к тебе обращаться"></label><div class="grid grid-cols-2 gap-3"><label class="text-xs font-black muted">ПОЛ<select id="gender" class="field mt-1"><option>Не указан</option><option>Женский</option><option>Мужской</option><option>Другое</option></select></label><label class="text-xs font-black muted">ДАТА РОЖДЕНИЯ<input id="birth" type="date" class="field mt-1"></label></div><div class="text-xs font-black muted">ВОЗРАСТ: <span id="age">не указан</span></div><div><div class="text-xs font-black muted mb-2">СФЕРЫ РАЗВИТИЯ</div><div id="areas" class="flex flex-wrap gap-2"></div></div><label class="block text-xs font-black muted">ПРОФЕССИЯ / ОБУЧЕНИЕ<input id="profession" class="field mt-1" placeholder="Например, дизайнер, студент, предприниматель"></label><label class="block text-xs font-black muted">ИНТЕРЕСЫ И ХОББИ<textarea id="interests" rows="2" class="field mt-1" placeholder="Что тебе нравится, чем увлекаешься..."></textarea></label><label class="block text-xs font-black muted">ГЛАВНЫЕ ЦЕЛИ<textarea id="goals" rows="2" class="field mt-1" placeholder="Чего хочешь достичь в ближайшие месяцы..."></textarea></label><label class="block text-xs font-black muted">ТРУДНОСТИ И ТО, ЧТО ХОЧЕШЬ ИЗМЕНИТЬ<textarea id="challenges" rows="2" class="field mt-1" placeholder="Например, откладываю дела, не хватает системности..."></textarea></label><label class="block text-xs font-black muted">РАСПОРЯДОК ДНЯ<textarea id="schedule" rows="2" class="field mt-1" placeholder="Когда обычно занят, когда свободен..."></textarea></label><label class="block text-xs font-black muted">СКОЛЬКО ВРЕМЕНИ ГОТОВ УДЕЛЯТЬ КВЕСТАМ В ДЕНЬ<select id="availableTime" class="field mt-1"><option value="10">Около 10 минут</option><option value="20">Около 20 минут</option><option value="30">Около 30 минут</option><option value="45">Около 45 минут</option><option value="60">Около часа</option><option value="90">Больше часа</option></select></label><label class="block text-xs font-black muted">ПРЕДПОЧТЕНИЯ ПО ЗАДАНИЯМ<textarea id="preferences" rows="2" class="field mt-1" placeholder="Какие задания нравятся: спокойные, творческие, активные..."></textarea></label><label class="block text-xs font-black muted">ОГРАНИЧЕНИЯ И НЕЖЕЛАТЕЛЬНЫЕ ЗАДАНИЯ<textarea id="restrictions" rows="2" class="field mt-1" placeholder="Что не предлагать, какие есть временные или личные ограничения..."></textarea></label><label class="block text-xs font-black muted">О СЕБЕ / ДОПОЛНИТЕЛЬНЫЙ КОНТЕКСТ<textarea id="about" rows="3" class="field mt-1" placeholder="Любая дополнительная информация, которую важно учитывать..."></textarea></label><p class="text-[10px] muted">API-ключ хранится только в Cloudflare Worker. Не вводи секретные ключи в профиль Questy RPG.</p></div>
-<div class="card rounded-2xl p-4 mt-4 space-y-3"><h2 class="font-black">🎁 Цель и награда</h2><label class="block text-xs font-black muted">НАЗВАНИЕ ПРИЗА<input id="prizeName" class="field mt-1" placeholder="Например, выходной в спа"></label><label class="block text-xs font-black muted">XP ДО ПОБЕДЫ<input id="targetXp" type="number" min="100" max="1000000" class="field mt-1"></label><label class="block text-xs font-black muted">ФОТО ПРИЗА<input id="prizeFile" type="file" accept="image/*" class="field mt-1 text-xs"></label><div id="preview" class="hidden"><img id="previewImg" class="h-28 w-28 rounded-xl object-cover"></div></div><button id="saveProfile" class="press btn w-full rounded-2xl py-4 font-black mt-4">Сохранить профиль и цель</button><p class="text-[10px] muted text-center mt-2">Данные и фото сохраняются в этом браузере</p></section>
+<div class="card rounded-2xl p-4 mt-4 space-y-3"><h2 class="font-black">🎁 Цель и награда</h2><label class="block text-xs font-black muted">НАЗВАНИЕ ПРИЗА<input id="prizeName" class="field mt-1" placeholder="Например, выходной в спа"></label><label class="block text-xs font-black muted">XP ДО ПОБЕДЫ<input id="targetXp" type="number" min="100" max="1000000" class="field mt-1"></label><label class="block text-xs font-black muted">ФОТО ПРИЗА<input id="prizeFile" type="file" accept="image/*" class="field mt-1 text-xs"></label><div id="preview" class="hidden"><img id="previewImg" class="h-28 w-28 rounded-xl object-cover"></div></div><button id="saveProfile" class="press btn w-full rounded-2xl py-4 font-black mt-4">Сохранить профиль и цель</button>
+<div class="card rounded-2xl p-4 mt-4 space-y-3">
+  <h2 class="font-black">🛡️ Резервная копия Questy RPG</h2>
+  <p class="text-xs muted">Сохрани профиль, квесты, прогресс, награды, события и переписку с Фокси в один файл. Файл можно перенести на другое устройство.</p>
+  <button id="exportFullBackup" class="press btn w-full rounded-xl py-3 font-black">⬇ Скачать полную резервную копию</button>
+  <button id="importFullBackup" class="press card raised w-full rounded-xl py-3 font-black">⬆ Восстановить из резервной копии</button>
+  <input id="fullBackupFile" type="file" accept=".json,application/json" class="hidden">
+  <p class="text-[10px] muted">При восстановлении текущие данные этого устройства будут заменены. Перед заменой приложение автоматически сохранит их отдельную копию.</p>
+  <p id="backupInfo" class="text-[10px] muted" aria-live="polite"></p>
+</div>
+<p class="text-[10px] muted text-center mt-2">Данные и фото сохраняются в этом браузере</p></section>
 
 <section class="view hidden" id="progressView">
 <h1 class="text-2xl font-black">Твой прогресс</h1><p class="text-sm muted mb-4">История, достижения и рост по сферам</p>
@@ -402,7 +412,106 @@ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
 
 $('birth').onchange=()=>$('age').textContent=age($('birth').value)??'не указан';
 $('prizeFile').onchange=e=>{let f=e.target.files[0];if(!f)return;if(f.size>2500000){notify('Фото должно быть меньше 2,5 МБ');e.target.value='';return}let r=new FileReader();r.onload=()=>{s.goal.image=r.result;$('previewImg').src=r.result;$('preview').classList.remove('hidden');save()};r.readAsDataURL(f)};
+
+function exportFullBackup(){
+  try{
+    const payload={
+      format:'questy-full-backup',
+      version:1,
+      app:'Questy RPG',
+      exportedAt:new Date().toISOString(),
+      data:JSON.parse(JSON.stringify(s))
+    };
+    if(payload.data.profile)payload.data.profile.apiKey='';
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url;
+    a.download='questy-full-backup-'+isoDate(new Date())+'.json';
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1500);
+    $('backupInfo').textContent='Резервная копия подготовлена. Проверь папку «Загрузки».';
+    toast('Резервная копия скачивается');
+  }catch(error){
+    console.error('Questy backup export:',error);
+    toast('Не удалось создать резервную копию');
+  }
+}
+function importFullBackup(file){
+  if(!file)return;
+  if(file.size>15000000){
+    toast('Файл слишком большой (максимум 15 МБ)');
+    return;
+  }
+  const reader=new FileReader();
+  reader.onload=()=>{
+    try{
+      const payload=JSON.parse(String(reader.result||''));
+      const data=payload?.data;
+      if(payload?.format!=='questy-full-backup'||payload?.version!==1||
+         !data||typeof data!=='object'||Array.isArray(data)||
+         !data.profile||typeof data.profile!=='object'||
+         !Array.isArray(data.tasks)||!data.fox||typeof data.fox!=='object'||
+         !Array.isArray(data.fox.chat)){
+        throw new Error('Это не полная резервная копия Questy RPG или её формат не поддерживается.');
+      }
+      if(!Number.isFinite(Number(data.xp))||!Number.isFinite(Number(data.coins))){
+        throw new Error('В файле повреждены данные прогресса.');
+      }
+      const summary=[
+        'В файле найдена резервная копия Questy RPG.',
+        'Профиль: '+(data.profile.name||'без имени'),
+        'Квестов: '+data.tasks.length,
+        'Сообщений Фокси: '+data.fox.chat.length,
+        'Дата копии: '+(payload.exportedAt||'не указана'),
+        '',
+        'Восстановление заменит текущие данные на этом устройстве.',
+        'Перед заменой приложение попробует сохранить текущую версию отдельно.',
+        '',
+        'Продолжить?'
+      ].join('\n');
+      if(!confirm(summary))return;
+
+      const current=localStorage.getItem(KEY);
+      const backupKey=KEY+'_backup_before_import_'+Date.now();
+      if(current!==null){
+        try{
+          localStorage.setItem(backupKey,current);
+          if(localStorage.getItem(backupKey)!==current)throw new Error('Проверка резервной копии не пройдена');
+        }catch(storageError){
+          throw new Error('Не удалось создать защитную копию текущих данных. Импорт отменён, ничего не изменено.');
+        }
+      }
+
+      const restored=JSON.parse(JSON.stringify(data));
+      if(restored.profile)restored.profile.apiKey='';
+      try{
+        const serialized=JSON.stringify(restored);
+        localStorage.setItem(KEY,serialized);
+        if(localStorage.getItem(KEY)!==serialized)throw new Error('Проверка сохранения не пройдена');
+      }catch(storageError){
+        if(current===null)localStorage.removeItem(KEY);
+        else localStorage.setItem(KEY,current);
+        throw new Error('Не удалось записать файл в память браузера. Текущие данные восстановлены.');
+      }
+      $('backupInfo').textContent='Копия восстановлена. Приложение перезапустится.';
+      alert('Готово! Резервная копия восстановлена. Questy RPG сейчас перезапустится.');
+      location.reload();
+    }catch(error){
+      console.error('Questy backup import:',error);
+      toast(error.message||'Не удалось прочитать резервную копию');
+    }
+  };
+  reader.onerror=()=>toast('Не удалось прочитать выбранный файл');
+  reader.readAsText(file);
+}
+
 $('saveProfile').onclick=saveProfile;$('generate').onclick=generate;$('add').onclick=addModal;
+$('exportFullBackup').onclick=exportFullBackup;
+$('importFullBackup').onclick=()=>$('fullBackupFile').click();
+$('fullBackupFile').onchange=e=>{const file=e.target.files?.[0];if(file)importFullBackup(file);e.target.value=''};
 fill();render();if(s.fox.chat.length===0){s.fox.chat.push({role:'assistant',text:'Привет! Я Фокси — твой друг и напарник. 🦊 Давай знакомиться: что тебе сейчас хотелось бы улучшить или попробовать в своей жизни?',at:new Date().toISOString()});save()}if(s.legendState.pending)setTimeout(showLegendDraft,350);
 })();
 </script></body></html>
