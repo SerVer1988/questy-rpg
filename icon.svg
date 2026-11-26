@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20px" height="20px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 0.01 0.01"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="45px" height="45px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 0.07 0.07"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <defs>
@@ -13,23 +13,23 @@ viewBox="0 0 0.01 0.01"
    ]]>
   </style>
    <clipPath id="id0">
-    <path d="M0 0l0.01 0c0,0 0,0 0,0l0 0.01c0,0 0,0 0,0l-0.01 0c0,0 0,0 0,0l0 -0.01c0,0 0,0 0,0z"/>
+    <path d="M0.02 0.01l0.03 0c0.01,0 0.01,0 0.01,0.01l0 0.03c0,0.01 0,0.01 -0.01,0.01l-0.03 0c-0.01,0 -0.01,0 -0.01,-0.01l0 -0.03c0,-0.01 0,-0.01 0.01,-0.01z"/>
    </clipPath>
-  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="0.01" y1="0" x2="0.01" y2="0.01">
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="0.03" y1="0.01" x2="0.03" y2="0.06">
    <stop offset="0" style="stop-opacity:1; stop-color:#8DDC4D"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#006434"/>
   </linearGradient>
-  <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="0.01">
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="0.01" y1="0" x2="0.02" y2="0.05">
    <stop offset="0" style="stop-opacity:1; stop-color:#BCEE6D"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#09A25C"/>
   </linearGradient>
  </defs>
  <g id="Слой_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect class="fil0" width="0.01" height="0.01"/>
-  <rect class="fil1" width="0.01" height="0.01"/>
+  <rect class="fil0" width="0.07" height="0.07"/>
+  <rect class="fil1" x="0.01" y="0.01" width="0.06" height="0.06" rx="0.01" ry="0.01"/>
   <g style="clip-path:url(#id0)">
-   <image x="-0.01" y="0" width="0.04" height="0.02" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAYAAAFQdqLUAAAACXBIWXMA
+   <image x="-0.06" y="0" width="0.19" height="0.13" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAYAAAFQdqLUAAAACXBIWXMA
 AAsSAAALEgHS3X78AAAgAElEQVR4nIR9BYAd5dX2M3J9fTfunhBCcA/BCR4KARqsxb1QoLTQ4sWK
 BgkaKBAI0iAJWiAQNIQEQoS427rcvT7yn3Ped+7uJvT7b1h279y5M68ceY6O7bqubxiglwHf92Go
 N/Ty9e/g/c6v4Pyu3/utE/k/dT11Pv/+P073O85V4wh+d4znf91THUeXc7sM5P97bMd5d7zvuLbx
